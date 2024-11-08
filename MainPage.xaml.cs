@@ -1,4 +1,6 @@
-﻿namespace MauiAppMaths
+﻿using System.Data;
+
+namespace MauiAppMaths
 {
     public partial class MainPage : ContentPage
     {
@@ -11,14 +13,13 @@
 
         private void OnCounterClicked(object sender, EventArgs e)
         {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+         if(!String.IsNullOrEmpty(exprEntry.Text))
+            {
+                DataTable dt = new DataTable();
+                var r = dt.Compute(exprEntry.Text, "");
+                exprEntry.Text = $"Votre resultat est {r}";
+            }
+        
         }
     }
 
