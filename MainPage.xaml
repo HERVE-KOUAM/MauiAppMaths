@@ -35,7 +35,7 @@
                 x:Name="CalclerBtn"
                 Text=" Calculer " 
                 Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+
         </VerticalStackLayout>
     </ScrollView>
 
