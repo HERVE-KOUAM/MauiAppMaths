@@ -5,37 +5,37 @@
 
     <ScrollView>
         <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
+            Spacing="25"
+            Padding="30.0"
+            VerticalOptions="Center">
+
             <Image
                 Source="maths.png"
                 HeightRequest="200"
-                Aspect="AspectFit"
+                HorizontalOptions="Center"
+             />
+
+            <Label
+                Text="Tapez votre expression mathématique "
+                FontSize="18"
                 HorizontalOptions="Center" />
 
-            <Label
-                Text="Tapez votre expression mathematique"
-                FontSize="18"
-                HorizontalOptions="Center"
-                />
-            <Entry 
-                
+            <Entry
                 x:Name="exprEntry"
                 WidthRequest="200"
-                FontSize="18"
-                
-                />
+                FontSize="18" />
 
             <Label
-                Text="votre resultat ? "
+                x:Name="resLabel"
+                Text="TVotre résultat ? "
                 FontSize="18"
-                HorizontalOptions="Center"
-                />
-            <Button
-                x:Name="CalclerBtn"
-                Text=" Calculer " 
-                Clicked="OnCounterClicked"
+                HorizontalOptions="Center"/>
 
+            <Button
+                x:Name="CalculerBtn"
+                Text="Calculer" 
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
         </VerticalStackLayout>
     </ScrollView>
 
